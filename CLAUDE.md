@@ -31,9 +31,14 @@ schedule==1.2.1
 selenium==4.15.2
 webdriver-manager==4.0.1
 python-dotenv==1.0.0
-pyinstaller==6.3.0
-pillow==10.1.0
+pyinstaller>=6.10.0
+pillow>=10.2.0
 ```
+
+## Python Version Compatibility
+- **Python 3.13**: Requires PyInstaller 6.10.0+ and Pillow 10.2.0+
+- **Python 3.12**: Compatible with PyInstaller 6.3.0+
+- **Python 3.8-3.11**: Compatible with original versions
 
 ## Build Process
 **Windows**: Run `build_exe.bat` - Creates `Automatron.exe`

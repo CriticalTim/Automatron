@@ -30,8 +30,10 @@ if errorlevel 1 (
     pip install selenium==4.15.2
     pip install webdriver-manager==4.0.1
     pip install python-dotenv==1.0.0
-    pip install pyinstaller==6.3.0
-    pip install pillow==10.1.0
+    echo Installing latest PyInstaller compatible with Python 3.13...
+    pip install "pyinstaller>=6.10.0"
+    echo Installing latest Pillow compatible with Python 3.13...
+    pip install "pillow>=10.2.0"
     
     if errorlevel 1 (
         echo.
