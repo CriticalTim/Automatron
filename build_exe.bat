@@ -12,14 +12,34 @@ if errorlevel 1 (
 )
 
 echo Installing/updating PyInstaller and dependencies...
+echo Upgrading pip first...
+python -m pip install --upgrade pip
+
+echo Installing requirements...
 pip install -r requirements.txt
 
 if errorlevel 1 (
     echo.
-    echo Failed to install dependencies
-    echo Please check your internet connection and try again
-    pause
-    exit /b 1
+    echo Failed to install dependencies, trying alternative approach...
+    echo Installing each dependency individually...
+    pip install customtkinter==5.2.2
+    pip install requests==2.31.0
+    pip install beautifulsoup4==4.12.3
+    pip install PyPDF2==3.0.1
+    pip install schedule==1.2.1
+    pip install selenium==4.15.2
+    pip install webdriver-manager==4.0.1
+    pip install python-dotenv==1.0.0
+    pip install pyinstaller==6.3.0
+    pip install pillow==10.1.0
+    
+    if errorlevel 1 (
+        echo.
+        echo Failed to install dependencies
+        echo Please check your internet connection and try again
+        pause
+        exit /b 1
+    )
 )
 
 echo.
