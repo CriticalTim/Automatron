@@ -53,8 +53,9 @@ if exist build rmdir /s /q build
 if exist dist rmdir /s /q dist
 if exist Automatron.exe del Automatron.exe
 
-REM Build with PyInstaller
-pyinstaller --clean Automatron.spec
+REM Build with PyInstaller (using python -m to avoid PATH issues)
+echo Using Python module to run PyInstaller...
+python -m PyInstaller --clean Automatron.spec
 
 if errorlevel 1 (
     echo.

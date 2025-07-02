@@ -59,6 +59,7 @@ pillow>=10.2.0
 - **"No module named 'customtkinter'"**: Install with `pip install customtkinter==5.2.2`
 - **BeautifulSoup import errors**: Spec includes both `bs4` and `beautifulsoup4`
 - **Dotenv import errors**: Added both `python_dotenv` and `dotenv` to hidden imports
+- **"pyinstaller command not found"**: Build script uses `python -m PyInstaller` to avoid PATH issues
 - **Large exe size**: Normal (150-300MB) due to Python interpreter + libraries
 - **Antivirus blocking**: Add Windows Defender exception for the exe
 
